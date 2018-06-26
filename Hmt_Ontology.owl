@@ -1,0 +1,1094 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#"
+     xml:base="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtBinaryTuple -->
+
+    <rdfs:Datatype rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtBinaryTuple"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtControllableItem -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtControllableItem">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtItemRoleProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtItem"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtControllable"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtPortable"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtServiceAvailable"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtCoordinatesPlacement -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtCoordinatesPlacement">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtObjectPlacement"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtHuman"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtRoom"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtThing"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtPoint"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtBinaryTuple"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtFusionProperty -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtFusionProperty">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtHumanProperty -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtHumanProperty">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtIsLocatedInPlacement -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtIsLocatedInPlacement">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtObjectPlacement"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtHuman"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtRoom"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtThing"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtIsLocatedIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtItemRoleProperty -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtItemRoleProperty">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtThingProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtMachineProperty -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtMachineProperty">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtObjectPlacement -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtObjectPlacement">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtSpatioTemporalEnvironmentProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtPortableItem -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtPortableItem">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtItemRoleProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtItem"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtControllable"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtPortable"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtServiceAvailable"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtProcessHasInput -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtProcessHasInput">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtProcessHasParameter"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtServiceModel"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtProcessHasLocal -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtProcessHasLocal">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtProcessHasParameter"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtServiceModel"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtProcessHasOutput -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtProcessHasOutput">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtProcessHasParameter"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtServiceModel"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtProcessHasParameter -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtProcessHasParameter">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtServiceProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtServiceModel"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtProcessHasParticipant -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtProcessHasParticipant">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtServiceProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtServiceModel"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtProcessHasPrecondition -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtProcessHasPrecondition">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtServiceProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtServiceModel"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtProcessHasResult -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtProcessHasResult">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtServiceProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtServiceModel"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtServiceProperty -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtServiceProperty">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtMachineProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtServiceProvidingItem -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtServiceProvidingItem">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtItemRoleProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtItem"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtControllable"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtPortable"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtServiceAvailable"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtSpatioTemporalEnvironmentProperty -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtSpatioTemporalEnvironmentProperty"/>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtThingProperty -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtThingProperty">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtControllable -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtControllable">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtItemDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtDescription">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtUniversalDataproperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtIDCode -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtIDCode">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtUniversalDataproperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtInvokable -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtInvokable">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtServiceDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtCompositeProcess"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtIsLocatedIn -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtIsLocatedIn">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtSpatioTemperalDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtItemDataProperty -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtItemDataProperty">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtThingDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtLocation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtLocation">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtUniversalDataproperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtMachineDataProperty -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtMachineDataProperty">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtName">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtUniversalDataproperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtServiceClassifier"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtPoint -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtPoint">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtUniversalDataproperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtPortable -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtPortable">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtItemDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtRole -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtRole">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtUniversalDataproperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtServiceAvailable -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtServiceAvailable">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtItemDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtServiceDataProperty -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtServiceDataProperty">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtMachineDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtSpatioTemperalDataProperty -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtSpatioTemperalDataProperty">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtThingDataProperty -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtThingDataProperty"/>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtUniversalDataproperty -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtUniversalDataproperty">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtActuator -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtActuator">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtAirCondition -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtAirCondition">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtItem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtAnniversary -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtAnniversary">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtTime"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtApp -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtApp">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtMachine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtAtomicProcess -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtAtomicProcess">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtServiceModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtBuliding -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtBuliding">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtSpace"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtCompositeProcess -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtCompositeProcess">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtServiceModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtDateTime -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtDateTime">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtTime"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtDayInMonth -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtDayInMonth">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtTime"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtDayInWeek -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtDayInWeek">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtTime"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtDevice -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtDevice">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtThing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtDoor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtDoor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtItem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtDoorMagneticSensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtDoorMagneticSensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtSensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtEndpointApp -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtEndpointApp">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtApp"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtInvokedApp"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtExcutionProcessChoreography -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtExcutionProcessChoreography">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtFusion"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtStateMonitoring"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtField -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtField">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtSpace"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtFusion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtFusion"/>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtGarden -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtGarden">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtField"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtGeomagneticSensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtGeomagneticSensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtSensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtHeaterActuator -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtHeaterActuator">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtActuator"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtHelperApp -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtHelperApp">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtEndpointApp"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtHoliday -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtHoliday">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtTime"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtHuman -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtHuman"/>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtHumiditySensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtHumiditySensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtSensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtInfraredSensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtInfraredSensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtSensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtInvokedApp -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtInvokedApp">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtApp"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtItem -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtItem">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtThing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtLightSensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtLightSensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtSensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtMachine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtMachine"/>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtMeetingRoom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtMeetingRoom">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtRoom"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtOffice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtMonthInYear -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtMonthInYear">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtTime"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtMotorActuator -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtMotorActuator">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtActuator"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtOffice -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtOffice">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtRoom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtOfflineService -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtOfflineService">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtServiceClassifier"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtOnlineService"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtOnlineService -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtOnlineService">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtServiceClassifier"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtOrganization -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtOrganization">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtHuman"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtParkingLot -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtParkingLot">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtField"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtPerson -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtPerson">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtHuman"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtPlayground -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtPlayground">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtField"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtPopularSensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtPopularSensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtSensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtPressureSensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtPressureSensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtSensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtPrintRoom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtPrintRoom">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtRoom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtRoad -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtRoad">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtField"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtRoom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtRoom">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtSpace"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtSensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtSensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtService -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtService">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtMachine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtServiceClassifier -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtServiceClassifier">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtService"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtServiceConcept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtServiceConcept -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtServiceConcept">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtService"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtServiceGrounding -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtServiceGrounding">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtServiceConcept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtServiceModel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtServiceModel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtServiceConcept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtServiceParameter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtServiceParameter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtService"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtServiceProfile -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtServiceProfile">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtServiceConcept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtShoppingApp -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtShoppingApp">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtInvokedApp"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtSimpleProcess -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtSimpleProcess">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtServiceModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtSpace -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtSpace">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtSpatioTemporalEnvironment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtSpatioTemporalEnvironment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtSpatioTemporalEnvironment"/>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtStateMonitoring -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtStateMonitoring">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtFusion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtStorageRoom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtStorageRoom">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtRoom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtSwitchActuator -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtSwitchActuator">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtActuator"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtTakeawayApp -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtTakeawayApp">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtInvokedApp"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtTemperatureSensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtTemperatureSensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtSensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtThing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtThing"/>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtTime -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtTime">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtSpatioTemporalEnvironment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtTimePeriod -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtTimePeriod">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtTime"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtUser -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtUser">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtPerson"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtWorker"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtWall -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtWall">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtItem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtWindow -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtWindow">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtItem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtWorker -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtWorker">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtPerson"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#test -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#test">
+        <rdf:type rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtTemperatureSensor"/>
+        <HmtName>Monica</HmtName>
+    </owl:NamedIndividual>
+    <rdf:Description>
+        <rdfs:label></rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtAirCondition"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtDoor"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtWall"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtWindow"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtAnniversary"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtDateTime"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtDayInMonth"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtDayInWeek"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtHoliday"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtMonthInYear"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtTimePeriod"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtAtomicProcess"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtCompositeProcess"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtSimpleProcess"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtDoorMagneticSensor"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtGeomagneticSensor"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtHumiditySensor"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtInfraredSensor"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtLightSensor"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtPopularSensor"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtPressureSensor"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtTemperatureSensor"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtGarden"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtParkingLot"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtPlayground"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtRoad"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtHeaterActuator"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtMotorActuator"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtSwitchActuator"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtMeetingRoom"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtOffice"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtPrintRoom"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtStorageRoom"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtServiceGrounding"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtServiceModel"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtServiceProfile"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
