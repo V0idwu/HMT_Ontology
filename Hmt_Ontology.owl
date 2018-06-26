@@ -990,12 +990,9 @@
     
 
 
-    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#test -->
+    <!-- http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#CrowdSourcing_Service -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#test">
-        <rdf:type rdf:resource="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#HmtTemperatureSensor"/>
-        <HmtName>Monica</HmtName>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/wutianyi/ontologies/Human_Machine_Thing#CrowdSourcing_Service"/>
     <rdf:Description>
         <rdfs:label></rdfs:label>
     </rdf:Description>
